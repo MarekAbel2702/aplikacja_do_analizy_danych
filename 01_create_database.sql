@@ -1,0 +1,1 @@
+CREATE DATABASE Aplikacja_Analizy_Danych
