@@ -1,0 +1,7 @@
+CREATE PROCEDURE DeleteUser
+	@UserID INT
+AS
+BEGIN
+	DELETE FROM Orders WHERE UserID = @UserID;
+	DELETE FROM Users WHERE ID = @UserID;
+END
