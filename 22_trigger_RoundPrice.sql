@@ -1,0 +1,9 @@
+CREATE TRIGGER trg_RoundPrice
+ON Products
+AFTER INSERT, UPDATE
+AS
+BEGIN
+	UPDATE Products
+	SET Price = ROUND(Price, 2)
+	WHERE ID IN (SELECT ID FROM inserted)
+END
